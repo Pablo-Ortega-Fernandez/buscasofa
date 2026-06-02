@@ -36,7 +36,8 @@
     "globals": "^16.0.0",
     "vite": "^6.3.5"
   },
-  "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true
-  }
+"cypress-cucumber-preprocessor": {
+  "nonGlobalStepDefinitions": false,
+  "stepDefinitions": "cypress/support/step_definitions/**/*.js"
+}
 }
