@@ -12,6 +12,14 @@ Then("debería ver el texto {string}", function (texto) {
   cy.contains(texto).should("be.visible");
 });
 
+Then("debería ver el logo de la aplicación", function () {
+  cy.get('header img[alt="Logo"]').should("be.visible");
+});
+
+Then("debería ver el enlace {string}", function (texto) {
+  cy.get("header").contains("a", texto).should("be.visible");
+});
+
 Then("debería ver el input de filtro por rótulo", function () {
   cy.get(".loading", { timeout: 15000 }).should("not.exist");
   cy.get("#filtro-rotulo").should("be.visible");
